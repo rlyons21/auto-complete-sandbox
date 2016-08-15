@@ -82,7 +82,6 @@ window.addEventListener("load", function(){
 	  		if (nominee_request.readyState === 4) {
 	    		if (nominee_request.status === 200) {
 					var response = JSON.parse(nominee_request.response);
-					debugger;
 					var nominee_arr = Object.keys(response.theaters[theater][show]);
 
 					// Loop over the JSON array.
@@ -120,8 +119,8 @@ window.addEventListener("load", function(){
 	  		if (role_request.readyState === 4) {
 	    		if (role_request.status === 200) {
 					var response = JSON.parse(role_request.response);
-					
-					var role_arr = Object.keys(response.theaters[theater][show][nominee]);
+					debugger;
+					var role_arr = response.theaters[theater][show][nominee];
 
 					// Loop over the JSON array.
 					role_arr.forEach(function(item) {
